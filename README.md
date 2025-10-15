@@ -1,0 +1,1 @@
+Only Snapdragon Users
