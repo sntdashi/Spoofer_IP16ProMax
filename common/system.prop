@@ -1,0 +1,92 @@
+#Peformance Stability 
+debug.egl.force_msaa=false
+debug.hwui.use_gpu_pixel_buffers=1
+debug.hwui.target_cpu_time_percent=10
+debug.hwui.render_dirty_regions=false
+debug.hwui.disable_vsync=true
+debug.hwui.level=0
+debug.kill_allocating_task=0
+debug.gralloc.gfx_ubwc_disable=0
+debug.rs.default-CPU-driver=1
+debug.rs.forcecompat=1
+debug.rs.max-threads=8
+debug.choreographer.skipwarning=30
+debug.choreographer.frametime=false
+debug.display.allow_non_native_refresh_rate_override=1
+debug.display.render_frame_rate_is_physical_refresh_rate=1
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.enable_transaction_tracing=false
+debug.sf.disable_client_composition_cache=1
+debug.sf.gpu_freq_indeks=7
+debug.sf.use_frame_rate_priority=1
+debug.sf.disable_backpressure=1
+debug.sf.enable_gl_backpressure=1
+debug.atrace.tags.enableflags=0
+debug.cpurend.vsync=false
+debug.composition.type=gpu
+debug.checkjni=0
+debug.atrace.tags.enableflags=0
+debug.gr.numframebuffers=3
+
+#Camera Properti
+persist.vendor.camera.aux.packagelist=*
+persist.vendor.camera.privapp.list=*
+persist.vendor.camera.enable.auxdebug=1
+persist.vendor.camera.eis.enable=1
+persist.vendor.camera.dual.enable=1
+persist.vendor.camera.hal1.packagelist=*
+persist.camera.HAL3.enabled=1
+persist.vendor.camera.HAL3.enabled=1
+persist.vendor.camera.aux.packagelist=com.android.camera
+persist.camera.eis.enable=1
+
+# Device Spoof – iPhone 16 Pro Max
+# CPU Spoof (Apple A18 Pro)
+ro.vendor.soc.model.external_name=Apple A18 Pro
+ro.vendor.soc.model.part_name=A18 Pro
+ro.soc.manufacturer=Apple Inc.
+ro.soc.model=Apple A18 Pro
+
+# Display & Refresh Rate
+debug.sys.display.fps=144
+debug.sys.display_refresh_rate=144
+debug.sys.game.maxfps=144
+debug.sys.display.min_refresh_rate=144
+debug.sys.display.max_fps=144
+debug.sys.video.max.fps=144
+debug.sys.vsync=false
+debug.sys.hwui.fps_mode=1
+debug.sys.surfaceflinger.enable_gpu=1
+
+# Touch Sensitivity Spoof – iPhone 16 Pro Max
+persist.sys.touch.sampling_boost=1
+persist.sys.display_high_refresh_rate=true
+persist.vendor.display.use_smooth_motion=true
+ro.surface_flinger.has_wide_color_display=true
+persist.sys.sf.native_mode=1
+persist.sys.touch.sensitivity=10
+persist.sys.touch.responsiveness=10
+
+#Thermal Unlock
+debug.sys.thermal.level=0
+debug.sys.thermal.protection=0
+debug.sys.thermal.enable_detailed=0
+
+# Device Spoof – iPhone 16 Pro Max
+ro.product.brand=Apple
+ro.product.model=iPhone16,1
+ro.product.marketname=iPhone 16 Pro Max
+ro.product.system.marketname=iPhone 16 Pro Max
+ro.product.system.model=iPhone16,1
+ro.product.vendor.model=iPhone16,1
+ro.product.vendor.marketname=iPhone 16 Pro Max
+ro.product.vendor.brand=Apple
+ro.product.odm.marketname=iPhone 16 Pro Max
+ro.product.odm.model=iPhone16,1
+ro.product.product.marketname=iPhone 16 Pro Max
+ro.product.product.model=iPhone16,1
+ro.build.product=iPhone16,1
+ro.chipset=A18 Pro
+# OpenGL ES Version
+ro.opengles.version=4194304 
