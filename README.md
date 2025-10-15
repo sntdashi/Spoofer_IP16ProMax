@@ -1,3 +1,3 @@
 Final Version/
-Use Magisk/Kernelsu
-Only Snapdragon Users
+> Use Magisk/Kernelsu
+> Only Snapdragon Users
