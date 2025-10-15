@@ -1,0 +1,46 @@
+#!/bin/sh
+MODDIR="${0%/*}"
+RANDOM_NAME="$RANDOM"
+
+# Wait until boot is completed
+while [ "$(getprop sys.boot_completed)" != "1" ]; do
+    sleep 1
+done
+
+# Write fake information to /dev/cpuinfo_<random_name>
+cat <<EOF >"/dev/cpuinfo_${RANDOM_NAME}"
+Processor               : AArch64 Processor rev 8 (aarch64)
+processor               : 8
+BogoMIPS                : 38.40
+Features                : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer         : 0x41
+CPU architecture        : 8
+CPU variant             : 0x0
+CPU part                : 0xD40
+CPU revision            : 0
+
+processor               : 1
+BogoMIPS                : 38.40
+Features                : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer         : 0x41
+CPU architecture        : 8
+CPU variant             : 0x0
+CPU part                : 0xD4C
+CPU revision            : 0
+
+Hardware                : Apple A17 Pro
+CPU model               : Apple A17 Pro
+Chipset                  : A17 Pro
+CPU name                : Apple Custom Silicon
+Manufacturing Process   : 3nm
+Cores                   : Hexa-core CPU
+Prime Core              : 2 x Prime Core, up to 3.70GHz
+Efficiency Core         : 4 x Efficiency Core, up to 2.15GHz
+GPU                     : Apple GPU 6-core
+AI Engine               : Apple Neural Engine 16-core
+EOF
+
+chcon u:object_r:system_file:s0 "/dev/cpuinfo_${RANDOM_NAME}"
+chmod 444 "/dev/cpuinfo_${RANDOM_NAME}"
+chown 0.0 "/dev/cpuinfo_${RANDOM_NAME}"
+mount --bind "/dev/cpuinfo_${RANDOM_NAME}" /proc/cpuinfo
